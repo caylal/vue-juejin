@@ -1,11 +1,14 @@
 <template>
-    <div class="containner">
+    <div class="xiaoce">
+        小册
+    </div>
+    <!-- <div class="containner">
         <div class="main">
            
         </div>
         <switch-tab/>
 
-    </div>
+    </div> -->
 </template>
 <script>
 import switchTab from '../components/switchTab'

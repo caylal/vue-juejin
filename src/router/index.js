@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import welcome from '../views/WelcomeView'
+
 import home from '../views/HomeView'
 import synthesize from '../views/SynthesizeView'
 import search from '../views/SearchView'
@@ -13,34 +13,68 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: welcome,
-      component: welcome,
+      path: '',
+      redirect: '/welcome'
+     
     },
     {
-      path: '/home',
-      name: 'home',
-      component: home
-    },
+      path: '/welcome',
+      component: resolve => require(['../views/WelcomeView'], resolve),
+    },   
     {
-      path: '/synthesize',
-      name: 'synthesize',
-      component: synthesize
+      path: '/index',
+      component: resolve => require(['../views/IndexView'], resolve),
+      children: [
+        {
+          path: '',
+          redirect: 'home'
+        },
+        {
+          path: 'home',
+          component: resolve => require(['../views/HomeView'], resolve),
+        },
+        {
+          path: 'synthesize',
+          component: resolve => require(['../views/SynthesizeView'], resolve),
+        },
+        {
+          path: 'search',
+          component: resolve => require(['../views/SearchView'], resolve),
+        },
+        {
+          path: 'xiaoce',
+          component: resolve => require(['../views/XiaoceView'], resolve),
+        },
+        {
+          path: 'me',
+          component: resolve => require(['../views/MeView'], resolve),
+        }
+      ]
     },
-    {
-      path: '/search',
-      name: search,
-      component: search
-    },
-    {
-      path: '/xiaoce',
-      name: xiaoce,
-      component: xiaoce
-    },
-    {
-      path: '/me',
-      name: me,
-      component: me
-    }
+    // {
+    //   path: '/home',
+    //   name: 'home',
+    //   component: home
+    // },
+    // {
+    //   path: '/synthesize',
+    //   name: 'synthesize',
+    //   component: synthesize
+    // },
+    // {
+    //   path: '/search',
+    //   name: search,
+    //   component: search
+    // },
+    // {
+    //   path: '/xiaoce',
+    //   name: xiaoce,
+    //   component: xiaoce
+    // },
+    // {
+    //   path: '/me',
+    //   name: me,
+    //   component: me
+    // }
   ]
 })

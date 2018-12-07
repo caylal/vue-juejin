@@ -1,18 +1,21 @@
 <template>
-    <div class="containner">
+    <div class="search-content">
+        搜索
+    </div>
+    <!-- <div class="containner">
        
     
     <switch-tab/>
 
-    </div>
+    </div> -->
 </template>
 <script>
-import switchTab from '../components/switchTab'
+// import switchTab from '../components/switchTab'
 
-export default {
-    name: 'search',
-    components: {
-        switchTab
-    }
-}
+// export default {
+//     name: 'search',
+//     components: {
+//         switchTab
+//     }
+// }
 </script>

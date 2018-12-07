@@ -1,42 +1,42 @@
 <template>
     <footer class="footer">
         <nav class="nav">
-            <router-link to="/home">
+            <router-link to="/index">
                 <div class="nav-icon">
-                    <img v-show="route !== '/home'" src="../assets/tab_home_normal.png" alt="">
-                    <img v-show="route === '/home'" src="../assets/tab_home.png" alt="">
+                    <img v-show="route !== '/index/home'" src="../assets/tab_home_normal.png" alt="">
+                    <img v-show="route === '/index/home'" src="../assets/tab_home.png" alt="">
                 </div>
             </router-link>
         </nav>
         <nav class="nav">
-             <router-link to="/synthesize">
+             <router-link to="/index/synthesize">
                 <div class="nav-icon">
-                    <img v-show="route !== '/synthesize'" src="../assets/tab_feidian_normal.png" alt="">
-                    <img v-show="route === '/synthesize'" src="../assets/tab_feidian.png" alt="">
+                    <img v-show="route !== '/index/synthesize'" src="../assets/tab_feidian_normal.png" alt="">
+                    <img v-show="route === '/index/synthesize'" src="../assets/tab_feidian.png" alt="">
                 </div>
             </router-link>
         </nav>
         <nav class="nav">
-             <router-link to="/search">
+             <router-link to="/index/search">
                 <div class="nav-icon">
-                    <img v-show="route !== '/search'" src="../assets/tab_explore_normal.png" alt="">
-                    <img v-show="route === '/search'" src="../assets/tab_explore.png" alt="">
+                    <img v-show="route !== '/index/search'" src="../assets/tab_explore_normal.png" alt="">
+                    <img v-show="route === '/index/search'" src="../assets/tab_explore.png" alt="">
                 </div>
             </router-link>
         </nav>
         <nav class="nav">
-             <router-link to="/xiaoce">
+             <router-link to="/index/xiaoce">
                 <div class="nav-icon">
-                    <img v-show="route !== '/xiaoce'" src="../assets/tab_xiaoce_normal.png" alt="">
-                    <img v-show="route === '/xiaoce'" src="../assets/tab_xiaoce.png" alt="">
+                    <img v-show="route !== '/index/xiaoce'" src="../assets/tab_xiaoce_normal.png" alt="">
+                    <img v-show="route === '/index/xiaoce'" src="../assets/tab_xiaoce.png" alt="">
                 </div>
             </router-link>
         </nav>
         <nav class="nav">
-             <router-link to="/me">
+             <router-link to="/index/me">
                 <div class="nav-icon">
-                    <img v-show="route !== '/me'" src="../assets/tab_profile_normal.png" alt="">
-                    <img v-show="route === '/me'" src="../assets/tab_profile.png" alt="">
+                    <img v-show="route !== '/index/me'" src="../assets/tab_profile_normal.png" alt="">
+                    <img v-show="route === '/index/me'" src="../assets/tab_profile.png" alt="">
                 </div>
             </router-link>
         </nav>

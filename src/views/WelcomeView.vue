@@ -24,7 +24,13 @@ export default {
     methods:{ 
        direct() {
            // 已登录跳转到首页，否则跳转到综合页
-           setTimeout(() => this.$router.push('/home'),2000)
+           let user = localStorage.getItem('user_info');
+           if(user){
+               setTimeout(() => this.$router.push('/index'),2000)
+           }else {
+               setTimeout(() => this.$router.push('/index/synthesize'),2000)
+           }
+           
        } 
     }
 };
